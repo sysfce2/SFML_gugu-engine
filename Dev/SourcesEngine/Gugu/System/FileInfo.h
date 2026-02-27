@@ -30,9 +30,9 @@ public:
     std::string_view GetFileName_utf8() const;
 
     std::string_view GetPrettyName() const;
-    std::string_view GetExtension() const;
-    std::string_view GetAllExtensions() const;
-    bool HasExtension(std::string_view extension) const;
+    std::string_view GetExtension() const;                  // Note: Case Sensitive.
+    std::string_view GetAllExtensions() const;              // Note: Case Sensitive.
+    bool HasExtension(std::string_view extension) const;    // Note: Case Insensitive.
 
     bool operator == (const FileInfo& right) const;
     bool operator != (const FileInfo& right) const;
